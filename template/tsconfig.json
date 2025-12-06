@@ -1,0 +1,7 @@
+{
+  "extends": "@astro/cli/tsbase",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["src"]
+}

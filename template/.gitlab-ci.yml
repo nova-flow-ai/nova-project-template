@@ -1,0 +1,36 @@
+image: harbor.yy.com/front_end/emp:node20.11pnpm8.15
+cache:
+  key: ${CI_JOB_NAME}
+  paths:
+    - node_modules/
+
+.common_script: &common_script
+  - echo -e "\n10.18.111.211 registry.npmjs.org registry.yarnpkg.com" >> /etc/hosts
+  - echo "当前commit hash ${CI_COMMIT_SHA}"
+  - echo "manual触发者的用户名 ${GITLAB_USER_NAME}"
+  - export branchName=`echo $CI_COMMIT_BRANCH`
+  - pnpm i --ignore-scripts
+  - pnpm add @astro/cli
+  - pnpm add -D @hd/pkgcare
+
+unpkg_only:
+  script:
+    - *common_script
+    - if [ "$branchName" = "main" ] || [ "$branchName" = "master" ] || [ "$branchName" = "emp" ]; then 
+        ./node_modules/.bin/pkgcare inc && pnpm build:unpkg && npm publish --no-git-checks;
+      else 
+        ./node_modules/.bin/pkgcare inc && pnpm build:unpkg && npm publish --no-git-checks --tag $branchName;
+      fi
+    - ./node_modules/.bin/astro sync ${CI_COMMIT_SHA} ${GITLAB_USER_NAME}
+  when: manual
+
+unpkg_and_cdnpush:
+  script:
+    - *common_script
+    - if [ "$branchName" = "main" ] || [ "$branchName" = "master" ] || [ "$branchName" = "emp" ]; then 
+        ./node_modules/.bin/pkgcare inc && pnpm build:unpkg && npm publish --no-git-checks && ./node_modules/.bin/pkgcare push;
+      else 
+        ./node_modules/.bin/pkgcare inc && pnpm build:unpkg && npm publish --no-git-checks --tag $branchName && ./node_modules/.bin/pkgcare push;
+      fi
+    - ./node_modules/.bin/astro sync ${CI_COMMIT_SHA} ${GITLAB_USER_NAME}
+  when: manual

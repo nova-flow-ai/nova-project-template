@@ -1,0 +1,14 @@
+[
+  {
+    "type": "FormItemType.UI",
+    "name": "UI素材",
+    "description": "tooltips描述",
+    "props": {
+      "listCount": {
+        "type": "AstroTypes.InputNumber",
+        "label": "元素展示个数",
+        "value": 60
+      }
+    }
+  }
+]

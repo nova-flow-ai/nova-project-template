@@ -1,0 +1,30 @@
+.wrap {
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    // background-image: radial-gradient(circle, red, yellow, green);
+    .love_wall_item {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: gray;
+        overflow: hidden;
+        position: relative; // 新增相对定位
+
+        .avatar {
+            width: 100%; // 改为相对父元素尺寸
+            height: 100%;
+            border-radius: 50%;
+            display: block; // 确保图片作为块级元素
+            object-fit: cover; // 新增图片适配方式
+            // 新增绝对定位确保完全填充
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}

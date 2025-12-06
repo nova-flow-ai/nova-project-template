@@ -1,0 +1,50 @@
+{
+  "name": "@astro-ui/template",
+  "version": "0.0.6",
+  "description": "",
+  "main": "dist/emp.js",
+  "type": "module",
+  "files": ["dist", "package.json", "README.md"],
+  "scripts": {
+    "dev": "pnpm run /^dev:.*/",
+    "dev:app": "emp dev --env-vars id=app --env-vars port=8801 --env-vars noDts=true",
+    "dev:host": "emp dev --env-vars id=host --env-vars port=8802",
+    "debug:unpkg": "emp dev --env unpkg",
+    "build": "emp build",
+    "build:unpkg": "emp build --env unpkg",
+    "start": "emp serve",
+    "stat": "emp build --analyze",
+    "build:doctor": "emp build --doctor",
+    "debug:doctor": "emp dev --doctor",
+    "lint": "biome check . --fix"
+  },
+  "maintainers": [
+    "xuhonngbin",
+    "liangxiaoming",
+    "liangzhirong",
+    "hupanpan2",
+    "wangchunyang2",
+    "linlijian2",
+    "chenweihao",
+    "chenkailin",
+    "chenlonglong",
+    "liujunjie",
+    "chenanni"
+  ],
+  "publishConfig": {
+    "registry": "https://npm-registry.yy.com"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@astro/cli": "latest",
+    "valtio": "^2.1.2"
+  },
+  "commitlint": {
+    "extends": ["@astro-ui/emp/config-conventional"]
+  }
+}
