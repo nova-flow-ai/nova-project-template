@@ -1,4 +1,4 @@
-import AstroConfig, {type EMPConfigExport} from '@astro/cli/config'
+import AstroConfig, {type EMPConfigExport} from '@nova-flow/cli/config'
 
 const exposes = {}
 

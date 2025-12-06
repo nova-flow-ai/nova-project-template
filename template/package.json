@@ -1,5 +1,5 @@
 {
-  "name": "@astro-ui/template",
+  "name": "@nova-flow/template",
   "version": "0.0.6",
   "description": "",
   "main": "dist/emp.js",
@@ -45,6 +45,6 @@
     "valtio": "^2.1.2"
   },
   "commitlint": {
-    "extends": ["@astro-ui/emp/config-conventional"]
+    "extends": ["@nova-flow/cli/config-conventional"]
   }
 }

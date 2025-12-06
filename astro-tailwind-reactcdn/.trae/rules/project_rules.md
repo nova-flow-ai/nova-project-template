@@ -5,7 +5,7 @@
 ### 核心框架
 - React 18
 - TypeScript
-- EMP (基于 @astro-ui/emp)
+- EMP (基于 @nova-flow/cli)
 
 ### 状态管理
 - Valtio：轻量级状态管理方案
@@ -34,17 +34,17 @@ src/
 ## 代码规范
 
 ### TypeScript 配置
-- 继承 `@astro-ui/emp/tsbase.json` 的基础配置
+- 继承 `@nova-flow/cli/tsbase.json` 的基础配置
 - 使用绝对路径导入（baseUrl: "./"）
 
 ### 代码风格
 - 使用 Biome 进行代码格式化和检查
-- 继承 `@astro-ui/emp/biome` 的规范配置
+- 继承 `@nova-flow/cli/biome` 的规范配置
 - 执行 `pnpm lint` 进行代码检查和自动修复
 
 ### Git 提交规范
 - 使用 commitlint 规范提交信息
-- 继承 `@astro-ui/emp/config-conventional` 配置
+- 继承 `@nova-flow/cli/config-conventional` 配置
 
 ## 组件开发规范
 

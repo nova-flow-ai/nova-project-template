@@ -1,5 +1,5 @@
 {
-  "name": "@astro-ui/my-astro-3",
+  "name": "@nova-flow/nova-project",
   "version": "0.0.6",
   "description": "",
   "main": "dist/emp.js",
@@ -40,11 +40,8 @@
     "typescript": "*"
   },
   "dependencies": {
-    "@astro/cli": "latest",
+    "@nova-flow/cli": "latest",
     "classnames": "^2.5.1",
     "valtio": "^2.1.2"
-  },
-  "commitlint": {
-    "extends": ["@astro-ui/emp/config-conventional"]
   }
 }

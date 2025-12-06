@@ -1,5 +1,5 @@
 {
-  "extends": "@astro/cli/tsbase",
+  "extends": "@nova-flow/cli/tsbase",
   "compilerOptions": {
     "baseUrl": "."
   },
