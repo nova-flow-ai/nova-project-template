@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@astro/cli/biome"]
+  "extends": ["@nova-flow/cli/biome"]
 }

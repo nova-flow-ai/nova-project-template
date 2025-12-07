@@ -15,7 +15,6 @@
 
 ### 包管理
 - pnpm：高性能的包管理工具
-- 私有 npm 源：npm-registry.yy.com
 
 ## 目录结构
 
@@ -104,7 +103,3 @@ pnpm dev:doctor
 - 支持 test 和 prod 环境
 - 自动识别测试环境（URL 包含 -test 或 test 参数）
 
-### API 封装
-- 使用 @astro/utils 中的 Http 类
-- 支持多实例管理
-- 支持自定义配置（base URL, credentials 等）

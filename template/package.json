@@ -32,7 +32,8 @@
     "chenanni"
   ],
   "publishConfig": {
-    "registry": "https://npm-registry.yy.com"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [],
   "author": "",
@@ -41,7 +42,7 @@
     "typescript": "*"
   },
   "dependencies": {
-    "@astro/cli": "latest",
+    "@nova-flow/cli": "latest",
     "valtio": "^2.1.2"
   },
   "commitlint": {

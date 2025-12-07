@@ -1,4 +1,4 @@
-import AstroConfig, { EMPConfigExport, EMPConfigExportWithoutChain } from '@astro/cli/config'
+import AstroConfig, { EMPConfigExport, EMPConfigExportWithoutChain } from '@nova-flow/cli/config'
 
 const exposes = {
   './ComponentDemo': './src/components/ComponentDemo',

@@ -1,4 +1,4 @@
-import {empRuntime} from '@astro/cli'
+import {empRuntime} from '@nova-flow/cli'
 
 empRuntime.init({})
 import('./boostrap')

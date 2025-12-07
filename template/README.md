@@ -7,10 +7,10 @@ https://ku.baidu-int.com/knowledge/HFVrC7hq1Q/M-wK0zh99p/nNsrl5_5fg/8RWarXI2wUJy
 ```bash
 curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=8.15.9 sh -
 ```
-全局安装 @astro/cli
+全局安装 @nova-flow/cli
 
 ```bash
-pnpm install -g @astro/cli --registry=https://npm-registry.yy.com
+pnpm install -g @nova-flow/cli
 ```
 
 ## Setup
@@ -114,7 +114,7 @@ export const 组件名字 = () => { }
       bg: {
         type: AstroTypes.Upload,
         label: '背景',
-        value: 'https://zhuiya.bs2cdn.yy.com/f2c/10000/14202/5572/a66f4951abe74ce0883dc20b92d70ab2.png',
+        value: '',
       },
       botton: {
         type: AstroTypes.Button,
