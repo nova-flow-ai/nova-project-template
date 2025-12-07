@@ -1,5 +1,5 @@
 {
-  "name": "@nova-flow/nova-project",
+  "name": "@nova-flow/template",
   "version": "0.0.6",
   "description": "",
   "main": "dist/emp.js",
